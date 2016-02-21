@@ -1,6 +1,10 @@
-var Body = React.createClass ({
+var Body = React.createClass({
   getInitialState() {
     return { skills: [] }
+  },
+
+  componentDidMount() {
+    $.getJSON('/api/v1/skills.json', (response) => { this.setState({ skills: response }) });
   },
 
   handleSubmit(skill) {
@@ -8,11 +12,7 @@ var Body = React.createClass ({
     this.setState({ skills: newState })
   },
 
-  componentDidMount() {
-    $.getJSON('/api/v1/skills.json', (response) => { this.setState({ skills: response }) });
-  },
-
-  render () {
+  render() {
     return (
       <div>
         <NewSkill handleSubmit={this.handleSubmit} />
