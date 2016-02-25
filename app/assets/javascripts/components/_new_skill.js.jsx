@@ -1,7 +1,9 @@
 var NewSkill = React.createClass({
   handleClick() {
-    var name    = this.refs.name.value;
-    var details = this.refs.details.value;
+    debugger;
+
+    let name    = this.refs.name.value;
+    let details = this.refs.details.value;
 
     $.ajax({
       url: '/api/v1/skills',

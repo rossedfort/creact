@@ -1,8 +1,8 @@
-var Header = React.createClass ({
+var Header = React.createClass({
   render() {
-    return (
+    return(
       <div>
-        <Body />
+        <h1>Creact</h1>
       </div>
     )
   }
